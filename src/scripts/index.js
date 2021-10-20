@@ -99,7 +99,6 @@ const renderPictures = function (list) {
 
         link.href = element.url;
         link.dataset.id = element.id;
-        console.log("Work", link.dataset.id);
 
         const image = clone.querySelector('img');
         image.src = cropImage(element.download_url, 5);
@@ -152,7 +151,7 @@ const togglePopup = function () {
  */
 const actionHandler = function (evt) {
     evt.preventDefault();
-    const nextPage = evt.currentTarget.dataset.page;
+    const nextPage = +evt.currentTarget.dataset.page;
     evt.currentTarget.dataset.page = nextPage + 1;
 
     if (nextPage > MAX_PAGE_IAMGES) {
