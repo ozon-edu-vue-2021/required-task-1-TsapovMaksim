@@ -99,6 +99,7 @@ const renderPictures = function (list) {
 
         link.href = element.url;
         link.dataset.id = element.id;
+        console.log("Work", link.dataset.id);
 
         const image = clone.querySelector('img');
         image.src = cropImage(element.download_url, 5);
@@ -172,7 +173,7 @@ const imageHandler = function (evt) {
     evt.preventDefault();
 
     if (evt.target.closest('a')) {
-        getPictureInfo(evt.target.dataset.id);
+        getPictureInfo(evt.target.closest('a').dataset.id);
     }
 }
 
