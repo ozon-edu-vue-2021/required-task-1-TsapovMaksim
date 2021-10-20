@@ -58,6 +58,10 @@ main {
     margin: 10px 0;
 }
 
+.action.fetch {
+    margin: 10px auto;
+}
+
 .action:hover {
     background-color: #4CAF50;
 }
@@ -130,10 +134,11 @@ figcaption {
 }
 
 .popup.open {
+    z-index: 1;
     visibility: visible;
 }
 
-.action {
+.action.close {
     position: absolute;
     top: 50px;
     right: 50px;
