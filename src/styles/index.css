@@ -58,6 +58,10 @@ main {
     margin: 10px 0;
 }
 
+.action.fetch {
+    margin: 10px auto;
+}
+
 .action:hover {
     background-color: #4CAF50;
 }
@@ -98,6 +102,10 @@ a:nth-child(3n) {
     column-count: initial;
 }
 
+.popup .link {
+    background-color: transparent;
+}
+
 figure {
     max-width: 100%;
     min-height: 350px;
@@ -130,10 +138,11 @@ figcaption {
 }
 
 .popup.open {
+    z-index: 1;
     visibility: visible;
 }
 
-.action {
+.action.close {
     position: absolute;
     top: 50px;
     right: 50px;
@@ -157,4 +166,9 @@ figcaption {
 
 .popup .link {
     display: inline;
+}
+
+.images .link {
+    font-size: 0;
+    line-height: 0;
 }
